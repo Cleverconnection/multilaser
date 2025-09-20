@@ -1,0 +1,5 @@
+Firmware update guidelines for GPON and DWDM devices.
+
+1. Backup current configuration.
+2. Apply firmware in maintenance window.
+3. Validate optical levels after update.
