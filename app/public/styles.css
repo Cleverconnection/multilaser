@@ -1,0 +1,264 @@
+:root {
+    --primary: #004aad;
+    --accent: #00a3ff;
+    --danger: #d7263d;
+    --bg: #f4f6fb;
+    --text: #1f2933;
+    --muted: #6c7a89;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-bottom: 4px solid var(--primary);
+    padding: 1rem 2rem;
+}
+
+.topbar h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.subtitle {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.main-nav {
+    background: var(--primary);
+    padding: 0.5rem 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.metric {
+    background: #eff4fb;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.metric span {
+    display: block;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.metric strong {
+    font-size: 1.8rem;
+    color: var(--primary);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #e3e8ee;
+    text-align: left;
+}
+
+table th {
+    background: #f1f5fb;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+tr.overdue {
+    background: #ffecec;
+}
+
+.button, button {
+    display: inline-block;
+    padding: 0.5rem 0.85rem;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.button:hover, button:hover {
+    background: var(--accent);
+}
+
+button.primary {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+}
+
+button.primary:hover {
+    opacity: 0.9;
+}
+
+.inline-form {
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.inline-form select,
+.form-grid select,
+.form-grid input,
+.form-grid textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #cbd2d9;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.form-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.alert {
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    background: #e8f1ff;
+    color: var(--primary);
+}
+
+.alert.error {
+    background: #ffe5e9;
+    color: var(--danger);
+}
+
+.user-info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.ticket-meta {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.description {
+    white-space: pre-wrap;
+}
+
+.timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.timeline li {
+    border-left: 3px solid var(--primary);
+    margin-left: 1rem;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.timeline li::before {
+    content: '';
+    position: absolute;
+    left: -9px;
+    top: 0.5rem;
+    width: 12px;
+    height: 12px;
+    background: var(--primary);
+    border-radius: 50%;
+}
+
+.timeline .timestamp {
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+.badge {
+    display: inline-block;
+    background: #fff5cc;
+    color: #8a6d3b;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    margin: 0.25rem 0;
+}
+
+.highlight {
+    color: var(--danger);
+    font-weight: bold;
+}
+
+.muted {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .inline-form {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    table th, table td {
+        font-size: 0.85rem;
+    }
+}
